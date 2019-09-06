@@ -1,0 +1,243 @@
+body {
+	font-family: Arial,Sans-serif,serif;
+	margin: 0;
+	
+	color: red;
+	background-color: orange;
+	padding-left: 0px;
+}
+
+ul {padding-inline-start: 0px; list-style-type:none;}
+a {text-decoration:none;}
+
+
+.top-bar {
+	overflow: visible;
+	color: grey;
+    background-color: black;
+    text-align:center;
+	padding: 10px;
+	top:0;
+	position:relative;
+	z-index:10;
+	
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    transition: 1s;
+	justify-content:center;
+	
+ 	
+   
+}
+.dropdown-content a {
+    color:white;
+    
+    padding: 12px;
+    display:block;
+    text-align: left;
+    background-color: grey;
+    width:58px;
+    }
+	li.dropdown:hover .dropdown-content {
+    display:block;
+	float:left;
+    transition: 1s;
+    max-height: 100px;
+	position: absolute;
+
+   
+   	
+    }
+
+.top-bar .flex-container {
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+}
+	
+.top-bar ul {
+	
+    display: flex;
+    justify-content: center;
+	margin: 0% 5%;
+	align-items: center;
+}
+
+.top-bar li {
+margin: auto;
+padding: 0 5px;
+
+}
+.top-bar a {transition: 1s;}
+.top-bar a:hover { color:white;transition: 1s;}
+
+.hero-image {
+	background-image: url("banner2.jpg");
+	background-size: cover;
+	background-position-x: center;
+	background-position-y:  center;
+	min-height: 300px;
+	height: 100vh;
+	position: relative;
+	margin: 0;
+	top: 0;
+	left:0;
+	right:0;
+	overflow: hidden;
+}
+
+.hero-text { position:relative; top: 10%; left: 10%}
+	
+.logo { display: inline-block; width: auto; }	
+
+
+
+/* Menu icon stuff */
+.menu-icon {
+    font:inherit;
+    display:none;
+    overflow:visible;
+    margin:0;
+    padding-top:10px;
+    cursor:pointer;
+    transition-timing-function:linear;
+    transition-duration:.15s;
+    transition-property:opacity,filter;
+    text-transform:none;
+    
+    border:0;
+    background-color:transparent
+    }  
+.filler { display:block;}
+.icon-box{
+    position:relative;
+    display:inline-block;
+    width:20px;
+    height:24px
+}
+.icon-inner{
+    top:20%;
+    display:block;
+    transition-timing-function:cubic-bezier(.19,1,.22,1);
+    transition-duration:.2s
+    
+}
+.icon-inner,.icon-inner:after,.icon-inner:before{
+    position:absolute;
+    width:20px;
+    height:2px;
+    transition-timing-function:ease;
+    transition-duration:.15s;
+    transition-property:transform;
+    border-radius:2px;
+    background-color:grey;
+    
+}
+.icon-inner:after,.icon-inner:before{
+    display:block;
+    content:""
+}
+.icon-inner:before{
+    top:-7px
+}
+.icon-inner:after{
+    bottom:-7px
+}
+.icon-inner:after, .icon-inner:before{
+    transition-delay:.1s;
+    transition-timing-function:linear;
+    transition-duration:0s
+}
+.icon-inner:before{
+    transition-property:top,opacity
+}
+.icon-inner:after{
+    transition-property:bottom,transform
+}
+.responsive .icon-inner{
+    transition-timing-function:cubic-bezier(.19,1,.22,1);
+    transform:rotate(765deg)
+}
+.responsive .icon-inner:after,.responsive .icon-inner:before{
+    transition-delay:0s
+}
+.responsive .icon-inner:before{
+    top:0;
+    opacity:0
+}
+.responsive .icon-inner:after{
+    bottom:0;
+    transform:rotate(90deg)
+}
+
+
+/* Responsive screen bits */
+
+@media screen and (max-width: 700px) {
+  .top-bar ul {display: none;}
+  .top-bar .menu-icon {display: inline-block;}
+  .top-bar .filler {display:none;}
+  
+}
+
+	 body.responsive .mobile-menu {transform: translate3d(0,0,0); }
+	 .mobile-menu {
+		 position: fixed;
+		 top:0;
+		 right: 0;
+		 left:0;
+		 height:100vh;
+		 background: black;
+		 align-items:center;
+		 color:white;
+		 overflow: auto;
+		 transform: translate3d(0,-100%,0);
+		 transition: transform .6s;
+		 z-index:1;
+	 }
+	 .mobile-menu .mobmen-items { 
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 20% 5%;
+		margin-top:70px;
+		
+	 }
+	 .mobile-menu ul {
+		list-style-type: none;
+	 }
+	 
+	 .mobile-menu .mobmen-items .sub-menu {
+		 border-top: 1px solid white;
+		 border-bottom: 1px solid white;
+		
+	 }
+	 
+	
+	 .sub-items {
+		display:none;
+		color:white;
+		text-decoration:none;
+	 }
+	  .is-expanded { 
+	    display:block;
+	 }
+	.mobile-menu a {
+		padding:10px;
+		align-items: center; 
+		border:white;
+		
+	}
+	.mobile-menu a {
+		display:block;
+		color: white;
+		text-decoration:none;
+		transition: 1s;
+		text-align:center;
+	}
+	.mobile-menu li:hover>a {color:grey;}
+	
