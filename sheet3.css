@@ -1,7 +1,7 @@
 body {
 	font-family: Arial,Sans-serif,serif;
 	margin: 0;
-	
+	 
 	color: red;
 	background-color: orange;
 	padding-left: 0px;
@@ -9,7 +9,7 @@ body {
 
 ul {padding-inline-start: 0px; list-style-type:none;}
 a {text-decoration:none;}
-
+html { scroll-behavior: smooth;}
 
 .top-bar {
 	overflow: visible;
@@ -87,12 +87,13 @@ padding: 0 5px;
 	left:0;
 	right:0;
 	overflow: hidden;
+	justify-content:center;
 }
 
 .hero-text { position:relative; top: 10%; left: 10%}
-	
+.hero-image .clickdown {display:block; position: relative; bottom:-50%;margin:auto;}
 .logo { display: inline-block; width: auto; }	
-
+.section2 {position:relative; top:0;}
 
 
 /* Menu icon stuff */
@@ -184,6 +185,7 @@ padding: 0 5px;
 }
 
 	 body.responsive .mobile-menu {transform: translate3d(0,0,0); }
+	 body.responsive .top-bar {position:fixed; top:0;left:0;right:0;}
 	 .mobile-menu {
 		 position: fixed;
 		 top:0;
@@ -197,6 +199,7 @@ padding: 0 5px;
 		 transform: translate3d(0,-100%,0);
 		 transition: transform .6s;
 		 z-index:1;
+		 overflow:auto;
 	 }
 	 .mobile-menu .mobmen-items { 
 		
