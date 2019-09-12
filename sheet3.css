@@ -1,10 +1,11 @@
 body {
 	font-family: Arial,Sans-serif,serif;
 	margin: 0;
-	 
+	
 	color: red;
 	background-color: orange;
 	padding-left: 0px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 ul {padding-inline-start: 0px; list-style-type:none;}
@@ -22,7 +23,21 @@ html { scroll-behavior: smooth;}
 	z-index:10;
 	
 }
+.submenu-bar {
+	position:absolute;
 
+	right:0;
+	left:0;
+	overflow:visible;
+	display:block;
+	background-color:grey;
+	padding:10px;
+	text-align:center;
+	z-index:9;
+	/* toggle this to shift it out the way */
+	transform: translate3d(0,-100%,0);
+	
+}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -95,6 +110,84 @@ padding: 0 5px;
 .logo { display: inline-block; width: auto; }	
 .section2 {position:relative; top:0;}
 
+/*test hero image stuff */
+.hero {
+    positsion: relative;
+    width: 100vw;
+    height: 90vh;
+	    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("banner2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+ 
+}
+.hero-content {
+    position: relative; 
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+
+
+
+/*PARALAX STUFF*/
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("img_parallax.jpg");
+  min-height: 100%;
+  height: 80vh;
+}
+
+.bgimg-2 {
+  background-image: url("img_parallax2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("img_parallax3.jpg");
+  min-height: 400px;
+  position:relative;
+
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
 
 /* Menu icon stuff */
 .menu-icon {
@@ -181,6 +274,7 @@ padding: 0 5px;
   .top-bar ul {display: none;}
   .top-bar .menu-icon {display: inline-block;}
   .top-bar .filler {display:none;}
+  .submenu-bar {display:none;}
   
 }
 
