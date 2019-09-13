@@ -6,16 +6,16 @@
 	  <div class = "logo" > LOGO </div>
 	  <ul class="mobMen" id = "mobMen">
 		<li><a> item 1</a></li>
-		<li class="dropdown">
+		<li class="dropdown"  onclick="expandsubitems()" >
            <a class="dropbutton"> About </a>
-           <div class="dropdown-content" id="sub-items">
-             <a href="#about">About</a>
-             <a href="simple parallax.html">Simple Parallax</a>
-           </div>
+           <ul class="dropdown-content" id="sub-items">
+             <li><a href="#about">About</a></li>
+             <li><a href="simple parallax.html">Simple Parallax</a></li>
+           </ul>
 		</li>
 		<li><a> item 2</a></li>
 	  </ul>
-	  <a  class="menu-icon"  onclick="myFunction()"> 
+	  <a  class="menu-icon"  onclick="closeMenu()"> 
 		<div class="icon-box">
 			<div class="icon-inner"></div>
 		</div>
