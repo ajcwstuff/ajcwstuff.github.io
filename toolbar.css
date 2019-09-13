@@ -89,108 +89,14 @@ padding: 0 5px;
 .top-bar a {transition: 1s;}
 .top-bar a:hover { color:white;transition: 1s;}
 
-.hero-image {
-	background-image: url("banner2.jpg");
-	background-size: cover;
-	background-position-x: center;
-	background-position-y:  center;
-	min-height: 300px;
-	height: 100vh;
-	position: relative;
-	margin: 0;
-	top: 0;
-	left:0;
-	right:0;
-	overflow: hidden;
-	justify-content:center;
-}
 
-.hero-text { display:block;}
-.hero-image .clickdown {display:block; position: relative; bottom:-50%;margin:auto;}
-.logo { display: inline-block; width: auto; }	
-.section2 {position:relative; top:0;}
 
-/*test hero image stuff */
-.hero {
-    positsion: relative;
-    width: 100vw;
-    height: 90vh;
+
+
 	
  
-}
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("banner2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
- 
-}
-.hero-content {
-    position: relative; 
-	top:50%;
-	/*display:flex;*/
-    font-family: "Monserrat", sans-serif;
-    color: white;
-    text-align: center;
-    margin: 0.625rem;
-	justify-content:center;
-	align-items:center;
-}
-.hero-title {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-.hero-subtitle {
-    font-size: 2rem;
-    font-weight: 200;
-    margin-top: 1rem;
-}
 
 
-
-
-/*PARALAX STUFF*/
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bgimg-1 {
-  background-image: url("img_parallax.jpg");
-  min-height: 100%;
-  height: 100vh;
-}
-
-.bgimg-2 {
-  background-image: url("img_parallax2.jpg");
-  min-height: 400px;
-}
-
-.bgimg-3 {
-  background-image: url("img_parallax3.jpg");
-  min-height: 400px;
-  position:relative;
-
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
 
 /* Menu icon stuff */
 .menu-icon {

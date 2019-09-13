@@ -105,7 +105,7 @@ padding: 0 5px;
 	justify-content:center;
 }
 
-.hero-text { display:block;}
+.hero-text { position:relative; top: 10%; left: 10%}
 .hero-image .clickdown {display:block; position: relative; bottom:-50%;margin:auto;}
 .logo { display: inline-block; width: auto; }	
 .section2 {position:relative; top:0;}
@@ -115,8 +115,9 @@ padding: 0 5px;
     positsion: relative;
     width: 100vw;
     height: 90vh;
-	
- 
+	    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hero::before {
     content: "";
@@ -133,14 +134,10 @@ padding: 0 5px;
 }
 .hero-content {
     position: relative; 
-	top:50%;
-	/*display:flex;*/
     font-family: "Monserrat", sans-serif;
     color: white;
     text-align: center;
     margin: 0.625rem;
-	justify-content:center;
-	align-items:center;
 }
 .hero-title {
     font-size: 3rem;
@@ -190,6 +187,7 @@ padding: 0 5px;
   width: 100%;
   text-align: center;
   color: #000;
+  font-size:50px;
 }
 
 /* Menu icon stuff */
