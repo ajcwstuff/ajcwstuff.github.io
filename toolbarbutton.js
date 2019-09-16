@@ -20,7 +20,7 @@
     if ((x.className === "sub-items" || x.className==="dropdown-content") && document.documentElement.clientWidth <= 700 ) {
       x.className = "sub-items is-expanded";
 	
-    } else {
+    } else if (document.documentElement.clientWidth <= 700) {
       x.className = "sub-items";
 
     }
